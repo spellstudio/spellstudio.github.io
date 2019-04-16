@@ -1,0 +1,23 @@
+{
+  "name": "spellstudio.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "scripts": {
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spellstudio/spellstudio.github.io.git"
+  },
+  "author": "Jonathan Samples <jonnysamps@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spellstudio/spellstudio.github.io/issues"
+  },
+  "homepage": "https://github.com/spellstudio/spellstudio.github.io#readme"
+}
