@@ -3,7 +3,10 @@ body, html {
   padding: 0;
   margin: 0;
   background-color: #292929;
+  font-family: Helvetica, Ariel, sans-serif;
+  color: #aaa;
 }
+
 .container {
   display: flex;
   flex: 1 0 auto;
@@ -13,31 +16,30 @@ body, html {
 .landing {
   display: flex;
   flex: 1 0 auto;
+  flex-direction: column;
   background-image: url('/images/moon_1440.png');
   background-position: center;
   background-repeat: no-repeat;
   /* background-size: contain; */
   width: 100%;
   max-height: 912px;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 a {
   padding: 10px 30px;
-  background-color: rgba(0, 0, 0, .5);
+  /* background-color: rgba(0, 0, 0, .5); */
   text-decoration: none;
   line-height: 2em;
-  color: #aaa;
-  font-family: Helvetica, Ariel, sans-serif;
+  color: #eee;
+  font-size: 1.5em;
   border-radius: 3px;
   margin-bottom: 100px;
+  text-shadow: 10px 10px 20px black;
+  font-weight: 100
 }
 
-a:hover {
-  background-color: rgba(255, 255, 255, .5);
-  color: black;
-}
 
 /* Mobile Landscape */
 @media only screen and (max-width: 823px) {
