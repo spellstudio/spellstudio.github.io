@@ -6,11 +6,255 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Spell Studio Bend</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <style>
+        body,
+        html {
+            background-color: #292929;
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica, Arial, sans-serif
+        }
+
+        .container {
+            max-width: 1335px;
+            margin: 0 auto;
+            background-image: url('/images/constellations_1440.png');
+            padding-top: 500px;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+
+        .grid-row {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+
+        .grid-item {
+            /* height: 600px; */
+            flex-basis: 20%;
+            -ms-flex: auto;
+            
+            position: relative;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .grid-item-wrapper {
+            -webkit-box-sizing: initial;
+            -moz-box-sizing: initial;
+            box-sizing: initial;
+            background: rgba(50, 50, 50, .5);
+            color: #aaa;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            -webkit-transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .grid-item-container {
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .item-image {
+            width: 100%;
+            height: 400px;
+            background-position: center top;
+            background-size: cover;
+        }
+
+        .item-text {
+            padding: 10px;
+        }
+
+        .item-text h3 {
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        @media(max-width: 1333px) {
+            .grid-item {
+                flex-basis: 33.33%;
+            }
+        }
+
+        @media(max-width: 1073px) {
+            .grid-item {
+                flex-basis: 33.33%;
+            }
+        }
+
+        @media(max-width: 815px) {
+            .container {
+                background-image: url('/images/constellations_720.png');
+                padding-top: 400px;
+            }
+
+            .grid-item {
+                flex-basis: 50%;
+            }
+        }
+
+        @media(max-width: 620px) {
+            .col {
+                clear: both;
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+                width: auto !important;
+            }
+        }
+
+        @media(max-width: 555px) {
+            .grid-item {
+                flex-basis: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Team Pages: I'm the heading!</h1>
+    <div class="container">
+        <div class="grid-row">
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="item-image" style="background-image: url('/images/trista.jpg')"></div>
+                        <div class="item-text">
+                            <h3>Meet Trista! @tristaloveshair</h3>
+                            <p>She’s been coloring and styling hair for 11 years and has been loving the Bend life for 2
+                                years. She’s an expert at on trend balayage looks and creating a custom color melt for
+                                each of her clients. She’s personable and makes sure each client walks out loving the
+                                way they look.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="item-image" style="background-image: url('/images/bridgit.jpg')"></div>
+                        <div class="item-text">
+                            <h3>Meet Bridgit! @bridgitneikirk</h3>
+                            <p>She’s our resident master of all things. Hair? Check! Chef? Check! Handy man? Check! If
+                                you’re looking for balayage, multidimensional color, and Brazilian Blowouts, you’re in
+                                good hands. If she’s not in the salon, she’s probably outside mountain biking or
+                                building something. 💪🏻</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="item-image" style="background-image: url('/images/erica.jpg')"></div>
+                        <div class="item-text">
+                            <h3>Meet Erica! @gemi_hair</h3>
+                            <p>Erica is a transplant from Ohio and graduated from cosmetology school in 2013. She went
+                                on to
+                                work at an Aveda salon to specialize in cut and styling but has since developed a love
+                                for color
+                                as well. She also has a love of travel and the outdoors and took some time off to work
+                                in a
+                                National Park which then landed her here in Bend. She has taken continuing education
+                                classes and
+                                now specializes in the latest trends such as balayage, ombré and vivid hair. Balayage
+                                has become
+                                her true love 💕 She is currently accepting new clients and would love to make your hair
+                                pretty.
+                                330-692-0654</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="item-image" style="background-image: url('/images/sarah.jpg')"></div>
+                        <div class="item-text">
+                            <h3> Meet Sarah! @sarahelaine_beauty</h3>
+                            <p>She is our resident lash extension specialist. She is a great
+                                hairdresser and specializes in Brazilian blowout smoothing treatments, platinum hair,
+                                and short
+                                haircuts. She loves a good podcast, so bring your favorite and some headphones for some
+                                peaceful
+                                "you" time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="item-image" style="background-image: url('/images/amanda.jpg')"></div>
+                        <div class="item-text">
+                            <h3>Meet Amanda! @amandagaboury</h3>
+                            <p>Ever since her first Barbie buzz cut, Amanda has always been obsessed with the Beauty
+                                Industry.
+                                After nearly 11 years behind the chair, she is so excited to finally be a part of the
+                                perfect
+                                salon family. With always a desire to learn and grow, she has attended many educational
+                                courses
+                                throughout the years. Specializing mostly in basic coloring, creative color, vivid
+                                color,
+                                balayage, extensions, color corrections, and technical cuts. When she’s not behind the
+                                chair she
+                                stays busy with baby Harrison who arrived in August 👶🏻</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="item-image" style="background-image: url('/images/savanah.jpg')"></div>
+                        <div class="item-text">
+                            <h3>Meet Savannah!</h3>
+                            <p> Or you may know her as Rainbow Rage! She has been in Bend Oregon almost all of her life and has been working in the
+                                fashion/beauty
+                                industry since she was a teenager. She has been doing hair professionally for over 9
+                                years but
+                                has enjoyed coloring her own hair and her friends hair since she was a child. Savannah
+                                Specializes in long lasting Rainbow hair colors, blonding and Brazilian Blowouts. She
+                                attends
+                                multiple hair shows a year and is always up to date with the latest tricks and trends.
+                                She is a
+                                sponsored Artist for Brazilian Bond Builder and ColorTrak tools and sometimes does
+                                education for
+                                them along with other companies. Please check out her Instagram @rainbowrage for her
+                                Portfolio.
+                                If you’re looking to spice up your look and let your inner beauty shine through your
+                                hair, then
+                                text Savannah at 541-226-8417 for an appointment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="item-image" style="background-image: url('/images/astacia.jpg')"></div>
+                        <div class="item-text">
+                            <h3>Meet our owner, Astacia! @astacia_hair</h3>
+                            <p>Astacia has been painting, styling, and loving hair for 10 years
+                                in beautiful Bend Oregon. She specializes in blondes and vivid coloring. She opened
+                                Spell, her
+                                dream salon, in 2018. Her intention was creating the vibe, intention, and team that
+                                would be
+                                something different and magical. She has recently reopened her books, so jump into her
+                                dm's!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
