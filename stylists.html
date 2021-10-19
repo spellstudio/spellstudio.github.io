@@ -2,273 +2,219 @@
 <html>
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Spell Studio Bend</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="icon" href="favicon.png" type="image/png" />
-    <style>
-        body,
-        html {
-            background-color: #292929;
-            margin: 0;
-            padding: 0;
-            font-family: Helvetica, Arial, sans-serif;
-            color: #aaa;
-        }
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Spell Studio Bend - Stylists</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <style>
+    .container {
+      max-width: 1335px;
+      margin: 0 auto;
+      background-image: url('/images/constellations_1440.png');
+      padding-top: 500px;
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
 
-        a {
-            color: white
-        }
+    .grid-row {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+    }
 
-        .container {
-            max-width: 1335px;
-            margin: 0 auto;
-            background-image: url('/images/constellations_1440.png');
-            padding-top: 500px;
-            background-position: center top;
-            background-repeat: no-repeat;
-        }
+    .grid-item {
+      /* height: 600px; */
+      flex-basis: 20%;
+      -ms-flex: auto;
 
-        .grid-row {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-start;
-        }
+      position: relative;
+      padding: 10px;
+      box-sizing: border-box;
+    }
 
-        .grid-item {
-            /* height: 600px; */
-            flex-basis: 20%;
-            -ms-flex: auto;
-            
-            position: relative;
-            padding: 10px;
-            box-sizing: border-box;
-        }
+    .grid-item-wrapper {
+      -webkit-box-sizing: initial;
+      -moz-box-sizing: initial;
+      box-sizing: initial;
+      background: rgba(50, 50, 50, .5);
+      color: #aaa;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      -webkit-transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
 
-        .grid-item-wrapper {
-            -webkit-box-sizing: initial;
-            -moz-box-sizing: initial;
-            box-sizing: initial;
-            background: rgba(50, 50, 50, .5);
-            color: #aaa;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            -webkit-transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-            transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
+    .grid-item-container {
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
 
-        .grid-item-container {
-            height: 100%;
-            width: 100%;
-            position: relative;
-        }
+    .item-image {
+      width: 100%;
+      height: 400px;
+      background-position: center top;
+      background-size: cover;
+    }
 
-        .item-image {
-            width: 100%;
-            height: 400px;
-            background-position: center top;
-            background-size: cover;
-        }
+    .item-text {
+      padding: 10px;
+    }
 
-        .item-text {
-            padding: 10px;
-        }
+    .item-text h3 {
+      color: #ccc;
+      margin-top: 10px;
+    }
 
-        .item-text h3 {
-            color: #ccc;
-            margin-top: 10px;
-        }
+    @media(max-width: 1333px) {
+      .grid-item {
+        flex-basis: 33.33%;
+      }
+    }
 
-        .address {
-            margin: 50px 0px;
-            text-align: center;
-        }
+    @media(max-width: 1073px) {
+      .grid-item {
+        flex-basis: 33.33%;
+      }
+    }
 
-        @media(max-width: 1333px) {
-            .grid-item {
-                flex-basis: 33.33%;
-            }
-        }
+    @media(max-width: 815px) {
+      .container {
+        background-image: url('/images/constellations_720.png');
+        padding-top: 400px;
+      }
 
-        @media(max-width: 1073px) {
-            .grid-item {
-                flex-basis: 33.33%;
-            }
-        }
+      .grid-item {
+        flex-basis: 50%;
+      }
+    }
 
-        @media(max-width: 815px) {
-            .container {
-                background-image: url('/images/constellations_720.png');
-                padding-top: 400px;
-            }
+    @media(max-width: 620px) {
+      .col {
+        clear: both;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto !important;
+      }
+    }
 
-            .grid-item {
-                flex-basis: 50%;
-            }
-        }
-
-        @media(max-width: 620px) {
-            .col {
-                clear: both;
-                float: none;
-                margin-left: auto;
-                margin-right: auto;
-                width: auto !important;
-            }
-        }
-
-        @media(max-width: 555px) {
-            .grid-item {
-                flex-basis: 100%;
-            }
-        }
-    </style>
+    @media(max-width: 555px) {
+      .grid-item {
+        flex-basis: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="grid-row">
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="item-image" style="background-image: url('/images/astacia.jpg')"></div>
-                        <div class="item-text">
-                            <h3>Meet our owner, Astacia! @astacia_hair</h3>
-                            <p>Astacia has been painting, styling, and loving hair for 10 years
-                                in beautiful Bend Oregon. She specializes in blondes and vivid coloring. She opened
-                                Spell, her
-                                dream salon, in 2018. Her intention was creating the vibe, intention, and team that
-                                would be
-                                something different and magical. She has recently reopened her books, so jump into her
-                                dm's!</p>
-                                <p>To book an appointment text: <a href="sms:5414190128">541.419.0128</a></p>
-                        </div>
-                    </div>
-                </div>
+  <div class="nav flex">
+    <a href="/" style='height: 32px;'><img src="favicon.png"></a>
+    <div class="filler"></div>
+    <a href="about.html">ABOUT</a>
+    &bullet;
+    <a href="stylists.html">STYLISTS</a>
+    <div class="padding"></div>
+  </div>
+  <div class="container">
+    <div class="grid-row">
+      <div class="grid-item">
+        <div class="grid-item-wrapper">
+          <div class="grid-item-container">
+            <div class="item-image" style="background-image: url('/images/astacia.jpg')"></div>
+            <div class="item-text">
+              <h3>Meet our owner, Astacia! @astacia_hair</h3>
+              <p>I’ve been painting, styling, and just plain loving hair since I can remember. I love natural sun kissed
+                color or being ankles deep in an all day color project. I stand behind my skills and always have a
+                yearning to learn more. The goal is to have you walking out that door feeling powerful, beautiful, and
+                like you just spent time with a close friend.
+                If you’re in my chair, its because we connect as much as it is your final result. I also have an amazing
+                huge family including my husband, 4 kids, a grand baby, 2 goats, and a dog (I probably forgot something
+                in there).</p>
+              <p>To book an appointment text: <a href="sms:5414190128">541.419.0128</a></p>
             </div>
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="item-image" style="background-image: url('/images/trista.jpg')"></div>
-                        <div class="item-text">
-                            <h3>Meet Trista! @tristaloveshair</h3>
-                            <p>She’s been coloring and styling hair for 11 years and has been loving the Bend life for 2
-                                years. She’s an expert at on trend balayage looks and creating a custom color melt for
-                                each of her clients. She’s personable and makes sure each client walks out loving the
-                                way they look.</p>
-                            <p>To book an appointment text: <a href="sms:9255186470">925.518.6470</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="item-image" style="background-image: url('/images/bridgit.jpg')"></div>
-                        <div class="item-text">
-                            <h3>Meet Bridgit! @bridgitneikirk</h3>
-                            <p>She’s our resident master of all things. Hair? Check! Chef? Check! Handy man? Check! If
-                                you’re looking for balayage, multidimensional color, and Brazilian Blowouts, you’re in
-                                good hands. If she’s not in the salon, she’s probably outside mountain biking or
-                                building something. 💪🏻</p>
-                            <p>To book an appointment text: <a href="sms:5415882849">541.588.2849</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="item-image" style="background-image: url('/images/erica.jpg')"></div>
-                        <div class="item-text">
-                            <h3>Meet Erica! @gemi_hair</h3>
-                            <p>Erica is a transplant from Ohio and graduated from cosmetology school in 2013. She went
-                                on to
-                                work at an Aveda salon to specialize in cut and styling but has since developed a love
-                                for color
-                                as well. She also has a love of travel and the outdoors and took some time off to work
-                                in a
-                                National Park which then landed her here in Bend. She has taken continuing education
-                                classes and
-                                now specializes in the latest trends such as balayage, ombré and vivid hair. Balayage
-                                has become
-                                her true love 💕 She is currently accepting new clients and would love to make your hair
-                                pretty.</p>
-                            <p>To book an appointment text: <a href="sms:3306920654">330.692.0654</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="item-image" style="background-image: url('/images/sarah.jpg')"></div>
-                        <div class="item-text">
-                            <h3> Meet Sarah! @sarahelaine_beauty</h3>
-                            <p>She is our resident lash extension specialist. She is a great
-                                hairdresser and specializes in Brazilian blowout smoothing treatments, platinum hair,
-                                and short
-                                haircuts. She loves a good podcast, so bring your favorite and some headphones for some
-                                peaceful
-                                "you" time.</p>
-                                <p>To book an appointment text: <a href="sms:5419906335">541.990.6335</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="item-image" style="background-image: url('/images/amanda.jpg')"></div>
-                        <div class="item-text">
-                            <h3>Meet Amanda! @amandagaboury</h3>
-                            <p>Ever since her first Barbie buzz cut, Amanda has always been obsessed with the Beauty
-                                Industry.
-                                After nearly 11 years behind the chair, she is so excited to finally be a part of the
-                                perfect
-                                salon family. With always a desire to learn and grow, she has attended many educational
-                                courses
-                                throughout the years. Specializing mostly in basic coloring, creative color, vivid
-                                color,
-                                balayage, extensions, color corrections, and technical cuts. When she’s not behind the
-                                chair she
-                                stays busy with baby Harrison who arrived in August. 👶🏻</p>
-                                <p>To book an appointment text: <a href="sms:5413775890">541.377.5890</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="item-image" style="background-image: url('/images/savanah.jpg')"></div>
-                        <div class="item-text">
-                            <h3>Meet Savannah! @rainbowrage</h3>
-                            <p> Or you may know her as Rainbow Rage! She has been in Bend Oregon almost all of her life and has been working in the
-                                fashion/beauty
-                                industry since she was a teenager. She has been doing hair professionally for over 9
-                                years but
-                                has enjoyed coloring her own hair and her friends hair since she was a child. Savannah
-                                Specializes in long lasting Rainbow hair colors, blonding and Brazilian Blowouts. She
-                                attends
-                                multiple hair shows a year and is always up to date with the latest tricks and trends.
-                                She is a
-                                sponsored Artist for Brazilian Bond Builder and ColorTrak tools and sometimes does
-                                education for
-                                them along with other companies. Please check out her Instagram @rainbowrage for her
-                                Portfolio.</p>
-                                <p>To book an appointment text: <a href="sms:5412268417">541.226.8417</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-wrapper">
+          <div class="grid-item-container">
+            <div class="item-image" style="background-image: url('/images/trista.jpg')"></div>
+            <div class="item-text">
+              <h3>Meet Trista! @tristaloveshair</h3>
+              <p>She’s been coloring and styling hair for 11 years and has been loving the Bend life for 2
+                years. She’s an expert at on trend balayage looks and creating a custom color melt for
+                each of her clients. She’s personable and makes sure each client walks out loving the
+                way they look.</p>
+              <p>To book an appointment text: <a href="sms:9255186470">925.518.6470</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-wrapper">
+          <div class="grid-item-container">
+            <div class="item-image" style="background-image: url('/images/erica_2.jpg')"></div>
+            <div class="item-text">
+              <h3>Meet Erica! @gemi_hair</h3>
+              <p>She graduated from Aveda Institute in 2013 in her home state of Ohio. After some styling at an Aveda salon and taking break from hair to work at Crater Lake, she found herself moving to Bend and doesn’t see herself living anywhere else. She is always excited to do lived in balayage blondes and any and all colors of the rainbow and also loves cutting seamless layers with beautiful movement and texture. Erica is an outdoor lover and particularly loves hiking at sunrise. When she’s not in the salon, she’s most likely traveling and exploring wether its The Oregon Coast or a different country.  
+              </p>
+              <p>To book an appointment text: <a href="sms:3306920654">330.692.0654</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-wrapper">
+          <div class="grid-item-container">
+            <div class="item-image" style="background-image: url('/images/anna.jpg')"></div>
+            <div class="item-text">
+              <h3>Meet Anna! @annaleighwarren</h3>
+              <p>I’m passionate about good hair. I specialize in lived in balayage looks, platinum, and rich brunettes. I started my hair journey 10 years ago. I am committed to using products to give you the results you want while keeping your hair and body healthy. I love connecting with people and creating major transformations. While I’m not working, you can find me with my dogs, cooking, reading, and lifting weights.   
+              </p>
+              <p>To book an appointment text: <a href="sms:3607461148">360.746.1148</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-wrapper">
+          <div class="grid-item-container">
+            <div class="item-image" style="background-image: url('/images/bekah.jpg')"></div>
+            <div class="item-text">
+              <h3>Meet Bekah! @celestial.esthetics.bekah</h3>
+              <p>I’m your Esthetician, friend, therapist, and care taker. I have been a licensed esthetician in Bend since 2018. I specialize in Brazilian and Fully Body waxing using high quality vegan and hypoallergenic hard wax (Mermaid Wax). I also specialize in skincare. I am certified by Hale and Hush as a sensitive skin specialist. Booking an appointment with me is not just an appointment but also an experience. You will leave my treatment room feeling affirmed and ready to take on the day. Whether you’re getting ready for a big event or dipping your toe in self care: I am here to guide you.
+              </p>
+              <p>To book an appointment text: <a href="sms:5039953243">503.995.3243</a></p>
+              <p>Or visit: <a href="http://celetialskincareandwaxingllc.com">celetialskincareandwaxingllc.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-wrapper">
+          <div class="grid-item-container">
+            <div class="item-image" style="background-image: url('/images/lexi.jpg')"></div>
+            <div class="item-text">
+              <h3>Meet Lexi! @lexismithhair</h3>
+              <p>I’m from Kansas City, Missouri and recently moved to Bend so my husband can attend school and because I love the outdoors! I’ve been vegan for almost 6 years. I use low tax color because I I am passionate about sustainability and ethical practices (including the extensions I use). I love doing Cali style and lived in blondes. I have 2 super fun dogs and I love my plant babies. 
+              </p>
+              <p>To book an appointment visit: <a href="http://www.lexismithhair.com/book">http://www.lexismithhair.com/book</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="address">1183 NW Wall St. Suite A Bend, OR 97703</div>
+  </div>
+  <div class="address">1183 NW Wall St. Suite A Bend, OR 97703</div>
 </body>
 
 </html>
